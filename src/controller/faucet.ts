@@ -3,7 +3,7 @@ import {NETWORKS} from "./accountManager";
 
 async function claimFaucet(account, network) {
     return new Promise<string>( (resolve, reject) => {
-        axios.post("https://faucet-api.polispay.org/",
+        axios.post("https://faucet-api.polis.tech/",
             {address: account[0], network: NETWORKS[network]}
         ).then(response => {
             if (response.data.error) {
