@@ -34,11 +34,9 @@ const PARAMS: {
             decimals: 18
         },
         rpcUrls: [
-            "https://sparta1.polispay.org",
-            "https://sparta2.polispay.org",
-            "https://sparta3.polispay.org"
+            "https://sparta-rpc.polis.tech"
         ],
-        blockExplorerUrls: ['https://sparta-explorer.polispay.org']
+        blockExplorerUrls: ['https://sparta-explorer.polis.tech']
     },
 }
 
