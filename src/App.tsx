@@ -71,7 +71,7 @@ function App() {
                     </div>
                     <p hidden={account === "Not connected"}>{account}</p>
                     <p hidden={account === "Not connected"}>{"Your balance: " + String(balance)}</p>
-                    <a hidden={txLink === ""} target="_blank" rel="noopener noreferrer" href={"https://sparta-explorer.polispay.org/tx/"+ txLink}>{txLink}</a>
+                    <a hidden={txLink === ""} target="_blank" rel="noopener noreferrer" href={"https://sparta-explorer.polis.tech/tx/"+ txLink}>{txLink}</a>
                 </header>
             </div>
         </div>
