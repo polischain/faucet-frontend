@@ -29,8 +29,8 @@ const PARAMS: {
         chainId: '0x51840',
         chainName: 'Sparta',
         nativeCurrency: {
-            name: 'Polis',
-            symbol: 'POLIS',
+            name: 'tPolis',
+            symbol: 'tPOLIS',
             decimals: 18
         },
         rpcUrls: [
