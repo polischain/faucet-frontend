@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 import './App.css';
+
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -16,6 +18,7 @@ function App() {
     const [balance, setBalance] = useState("0");
     const [txLink, setTxLink] = useState("");
     const [network, setNetwork] = useState(0)
+    const [captcha, setCaptcha] = useState("");
 
     return (
         <div>
@@ -56,8 +59,8 @@ function App() {
                             text={"Receive"}
                             loadingText="Sending..."
                             color="#0053a0"
-                            hidden={account === "Not connected"}
-                            onClick={() => faucetClaim(account, network)
+                            hidden={account === "Not connected" || !captcha}
+                            onClick={() => faucetClaim(account, network, captcha)
                                 .then((hash) => {
                                     toast.success("Transaction sent!");
                                     setTxLink(hash);
@@ -69,6 +72,16 @@ function App() {
                             }
                         />
                     </div>
+                    <div style={{"margin": "15px"}}>
+                        <form id="receive" action="" method="POST" hidden={account === "Not connected"}>
+                            <HCaptcha
+                                theme="dark"
+                                sitekey={"e4201a38-772c-4dd8-aef0-ce457b4d87c5"}
+                                onVerify={(token: string) => { setCaptcha(token) }}
+                            />
+                        </form>
+                    </div>
+
                     <p hidden={account === "Not connected"}>{account}</p>
                     <p hidden={account === "Not connected"}>{"Your balance: " + String(balance)}</p>
                     <a hidden={txLink === ""} target="_blank" rel="noopener noreferrer" href={"https://sparta-explorer.polis.tech/tx/"+ txLink}>{txLink}</a>
