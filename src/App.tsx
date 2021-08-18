@@ -72,7 +72,7 @@ function App() {
                             }
                         />
                     </div>
-                    <div style={{"margin": "15px"}}>
+                    <div style={{"margin": "15px"}} hidden={captcha !== ""}>
                         <form id="receive" action="" method="POST" hidden={account === "Not connected"}>
                             <HCaptcha
                                 theme="dark"
