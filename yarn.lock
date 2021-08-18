@@ -1492,7 +1492,7 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@hcaptcha/react-hcaptcha@^0.3.7":
+"@hcaptcha/react-hcaptcha@0.3.7":
   version "0.3.7"
   resolved "https://registry.yarnpkg.com/@hcaptcha/react-hcaptcha/-/react-hcaptcha-0.3.7.tgz#ebb934887272ff43c13c5c2bf3e183e6f841da58"
   integrity sha512-SqtDoWS79zEWv+v9wJM6Kk6Fe4r1ipc3Fj65gRHgzL4yrTineF4iJghI819vDsqFggfEnvYppDi/wGKosGiaCQ==
