@@ -4,12 +4,12 @@ import WalletConnectProvider from "@walletconnect/web3-provider";
 
 export enum ChainId {
     SPARTA = 333888,
-    ATHENE = 333999,
+    OLYMPUS = 333999,
 }
 
 export const NETWORKS = {
     [ChainId.SPARTA]: "testnet",
-    [ChainId.ATHENE]: "mainnet"
+    [ChainId.OLYMPUS]: "mainnet"
 }
 
 const PARAMS: {
