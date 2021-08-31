@@ -38,6 +38,19 @@ const PARAMS: {
         ],
         blockExplorerUrls: ['https://sparta-explorer.polis.tech']
     },
+    [ChainId.OLYMPUS]: {
+        chainId: '0x518AF',
+        chainName: 'Olympus',
+        nativeCurrency: {
+            name: 'Polis',
+            symbol: 'POLIS',
+            decimals: 18
+        },
+        rpcUrls: [
+            "https://rpc.polis.tech"
+        ],
+        blockExplorerUrls: ['https://explorer.polis.tech']
+    },
 }
 
 
@@ -77,7 +90,7 @@ class AccountManager {
             });
 
             this.web3Provider = await web3Modal.connect();
-
+            
             try {
                 this.account = await this.web3Provider.request({
                     method: "eth_requestAccounts",

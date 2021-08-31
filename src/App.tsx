@@ -38,7 +38,7 @@ function App() {
                         }} onClick={ () => setNetwork(ChainId.SPARTA)}>Sparta <br/> (Testnet)</Button>
                         <Button color="success" size="lg" hidden={network !== 0} style={{
                             margin: "10px",
-                        }} onClick={ () => setNetwork(ChainId.OLYMPUS)} disabled>Olympus <br/>(Mainnet)</Button>
+                        }} onClick={ () => setNetwork(ChainId.OLYMPUS)}>Olympus <br/>(Mainnet)</Button>
 
                         <LoadButton
                             text="Connect"
